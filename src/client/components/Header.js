@@ -5,7 +5,6 @@ export default class Header extends React.Component {
   render() {
     return (
       <nav>
-        <h1>The App</h1>
         {this.props.user && <div>{this.props.user.username}</div>}
       </nav>
     );

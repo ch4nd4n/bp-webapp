@@ -5,7 +5,7 @@ const winston = require('winston');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.json({ success: true });
+  res.json({ success: true, msg: 'Done' });
 });
 
 router.route('/users')

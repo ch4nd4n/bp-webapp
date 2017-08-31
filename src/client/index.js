@@ -6,3 +6,8 @@ render(
   <App />,
   document.getElementById('root')
 );
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
