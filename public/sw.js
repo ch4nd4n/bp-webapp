@@ -1,4 +1,4 @@
-const cacheName = 'app-v29';
+const cacheName = 'app-v31';
 const urlsToCache = [
   '/',
   '/index.html'

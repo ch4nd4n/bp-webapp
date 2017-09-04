@@ -12,6 +12,10 @@ router.route('/users')
   .get(controllers.users, handleResponse)
   .post(controllers.createUser, handleResponse);
 
+router.route('/users/geolocation')
+  .get(controllers.postLocation, handleResponse);
+
+
 module.exports = router;
 
 function handleResponse(req, res) {

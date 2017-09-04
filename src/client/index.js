@@ -11,3 +11,17 @@ render(
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js');
 }
+
+// if ('geolocation' in navigator) {
+//   /* geolocation is available */
+//   navigator.geolocation.getCurrentPosition((position) => {
+//     postLocation(position.coords.latitude, position.coords.longitude);
+//   });
+// } else {
+//   /* geolocation IS NOT available */
+// }
+
+
+// function postLocation(lat, lng) {
+//   fetch('/api/users/geolocation?lat=' + lat + '&lng=' + lng);
+// }

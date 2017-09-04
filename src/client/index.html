@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="theme-color" content="#2196F3"/>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boilerplate</title>
+    <meta name="theme-color" content="#2196F3"/>
     <link rel="manifest" href="/manifest.json">
-    <title>The App</title>
     <style>
-      body{background: #2196F3;}
+      body{
+        background: #2196F3;
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+      h1{
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+      }
+      nav{
+        display: inline-block;
+        float: right;
+      }
+      header {
+        padding: 1em;
+        border-bottom: 1px solid black;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+      content, footer{
+        display: block;
+        padding: 1em;
+      }
     </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <header>
-      <h1>The App</h1>
-    </header>
-    <content>
-      <div id="root"></div>
-    </content>
-    <footer>
-      Copyleft 2017
-    </footer>
+    <div id="root">
+      <header>
+        <h1>Boilerplate</h1>
+      </header>
+      <content>
+        Loading up hang on
+      </content>
+      <footer>
+        Copyleft 2017
+      </footer>
+    </div>
   </body>
 </html>
