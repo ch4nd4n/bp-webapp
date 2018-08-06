@@ -9,7 +9,7 @@ render(
 
 // Register Service Worker
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register('/dist/sw.js');
 }
 
 // if ('geolocation' in navigator) {

@@ -1,63 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" sizes="192x192" href="/images/icon.png">
-    <title>Boilerplate</title>
-    <meta name="theme-color" content="#2196F3"/>
-    <link rel="manifest" href="/manifest.json">
-    <style>
-      body{
-        background: #2196F3;
-        border: 0;
-        padding: 0;
-        margin: 0;
-      }
-      h1{
-        padding: 0;
-        margin: 0;
-        display: inline-block;
-      }
-      nav{
-        display: inline-block;
-        float: right;
-      }
-      header {
-        padding: 1em;
-        border-bottom: 1px solid black;
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
-      }
-      content, footer{
-        display: block;
-        padding: 1em;
-      }
-      .frm-item {
-        width: 100%;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-      }
-      .frm-item input {
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root">
-      <header>
-        <h1>Boilerplate</h1>
-      </header>
-      <content>
-        Hang on
-      </content>
-      <footer>
-        Copyleft 2017
-      </footer>
-    </div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" sizes="192x192" href="/images/icon.png">
+  <title>Boilerplate</title>
+  <meta name="theme-color" content="#2196F3" />
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    body {
+      background: #2196F3;
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+    }
+
+    nav {
+      display: inline-block;
+      float: right;
+    }
+
+    header {
+      padding: 1em;
+      border-bottom: 1px solid black;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+
+    content,
+    footer {
+      display: block;
+      padding: 1em;
+    }
+
+    .frm-item {
+      width: 100%;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .frm-item input {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+    <header>
+      <h1>Boilerplate</h1>
+    </header>
+    <content>
+      Hang on
+    </content>
+    <footer>
+      Copyleft 2017
+    </footer>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('sw.js')
+        .then(function () { console.log("Service Worker Registered again"); });
+    }
+  </script>
+</body>
+
 </html>

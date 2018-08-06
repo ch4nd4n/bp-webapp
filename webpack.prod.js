@@ -2,6 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
+const DIST_DIR = `${path.resolve()}/public/dist`;
 
 module.exports = {
   entry: {
@@ -10,7 +13,7 @@ module.exports = {
   },
   output: {
     filename: '[name].[chunkhash].js',
-    path: `${path.resolve()}/public/dist`
+    path: DIST_DIR
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
@@ -29,6 +32,11 @@ module.exports = {
       minimize: true,
       debug: false
     }),
+    new WorkboxPlugin({
+      globDirectory: 'dist',
+      globPatterns: ['**/*.{html,js,css}'],
+      swDest: path.join(DIST_DIR, 'sw.js'),
+    }),
     new webpack.optimize.UglifyJsPlugin(),
     new CompressionPlugin({
       asset: '[path].gz[query]',
@@ -36,7 +44,7 @@ module.exports = {
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
       minRatio: 0.8
-    })
+    }),
   ],
   module: {
     loaders: [
